@@ -5,11 +5,11 @@ for i in range(n):
 
 def dfs(x,y):
   if x<=-1 or x>=n or y<=-1 or y>=m:
-    return False
+    return False # 범위를 벗어나면 종료
 
   if graph[x][y]==0:
-    graph[x][y]=1
-    dfs(x+1,y)
+    graph[x][y]=1 # 방문처리
+    dfs(x+1,y) #상, 하, 좌, 우 모두 방문
     dfs(x-1,y)
     dfs(x,y+1)
     dfs(x,y-1)
